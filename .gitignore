@@ -1,2 +1,2 @@
 *.sql
-*/connector.py
+/classes/connector.py
