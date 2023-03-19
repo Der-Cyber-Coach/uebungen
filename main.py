@@ -25,6 +25,12 @@ def main():
             eingabe = menu.name_menu()
             Abfrage = queryClass()
             Abfrage.sucheName(eingabe)
+    if eingabe == 4:
+        data_delete = menu.delete_menu()
+        data_deleted = deleteClass()
+        data_deleted.deleteAll(data_delete)
+
+
 
 
 if __name__=="__main__":

@@ -22,10 +22,10 @@ class deleteClass(verbindung):
     
     
 
-    def deleteAll(self):
+    def deleteAll(self,tabelle:str):
         with self.connection as connection:
             with connection.cursor() as cursor:
-                delete = f"DELETE FROM `personen`, `laender`, `sprachen`;"
+                delete = f"DELETE FROM `{tabelle}`"
                 print(f"Achtung, Sie löschen alle Datenbankinhalte.")
                 print(f"Bitte bestätigen Sie das Löschen.")
                 confirmation = str(input("Geben Sie OK ein: >>"))
@@ -34,7 +34,7 @@ class deleteClass(verbindung):
                         cursor.execute(delete)
                         connection.commit()
                         time.sleep(1)
-                        print(f"Es wurden alle Daten aus der Datenbank gelöscht.")
+                        print(f"Es wurden alle Daten aus der Tabelle {tabelle} gelöscht.")
                     except:
                         print("Löschen fehlgeschlagen. Zurück zum Hauptmenü...")
                         time.sleep(1)

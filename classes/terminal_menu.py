@@ -46,6 +46,11 @@ def name_menu():
     name = str(input("Name: >> "))
     return name
 
+def delete_menu():
+    print(f"(1) Alle Daten einer Tabelle löschen.")
+    print(f"Geben Sie den Tabellennamen ein (laender, personen oder sprachen)")
+    eingabe = str(input(">>: "))
+    return eingabe
 
 
 
