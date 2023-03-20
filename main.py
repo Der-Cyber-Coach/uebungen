@@ -10,7 +10,7 @@ def main():
     sleep_timer()
     eingabe = menu.main_menu()
     #print(eingabe)
-
+    os.system('clear')
     if eingabe ==1:
         personenSuche = menu.personen_menu()
         if personenSuche == 1:
